@@ -7,7 +7,7 @@ const posts = (await getPosts()).slice(0, 10);
 ---
 
 <Base>
-  <h1>Recent posts</h1>
+  <div class="page-title"><h1>Recent posts</h1></div>
   <PostList
     posts={posts}
     showSection

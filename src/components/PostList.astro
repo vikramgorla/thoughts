@@ -20,7 +20,7 @@ const { posts, showSection = false, emptyText = 'No posts yet.' } = Astro.props;
         <a class="title" href={postUrl(post)}>{post.data.title}</a>
         <div class="meta">
           <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
-          {showSection && <> · {SECTIONS[post.data.section].title}</>}
+          {showSection && <>{' · '}{SECTIONS[post.data.section].title}</>}
         </div>
         {post.data.description && <p>{post.data.description}</p>}
       </li>

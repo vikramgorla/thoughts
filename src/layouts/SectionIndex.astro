@@ -14,7 +14,9 @@ const posts = await getPosts(section);
 ---
 
 <Base title={info.title} description={info.description}>
-  <h1>{info.title}</h1>
-  <p class="lede">{info.description}</p>
+  <div class="page-title">
+    <h1>{info.title}</h1>
+    <p class="lede">{info.description}</p>
+  </div>
   <PostList posts={posts} />
 </Base>

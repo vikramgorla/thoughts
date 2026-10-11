@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import Ornament from '../components/Ornament.astro';
 import { SECTIONS } from '../consts';
 import { formatDate, type Post } from '../lib/posts';
 
@@ -13,17 +14,19 @@ const { title, date, section, description, originalUrl, originalAuthor } = post.
 
 <Base title={title} description={description}>
   <article>
+    <header class="post">
     <h1>{title}</h1>
     <div class="meta">
       <time datetime={date.toISOString()}>{formatDate(date)}</time>
-      · <a href={`/${section}/`}>{SECTIONS[section].title}</a>
+      {' · '}<a href={`/${section}/`}>{SECTIONS[section].title}</a>
     </div>
     {originalUrl && (
       <p class="note">
         First published at <a href={originalUrl} rel="noopener">{new URL(originalUrl).hostname}</a>{originalAuthor && <> under the name {originalAuthor}</>}.
       </p>
     )}
-    <hr />
+    </header>
+    <Ornament class="divider" />
     <slot />
   </article>
 </Base>
