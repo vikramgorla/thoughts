@@ -8,8 +8,6 @@ source: devto
 draft: false
 ---
 
-# Running OpenClaw Behind Nginx on a Shared Server
-
 I run a Raspberry Pi as my home server. Not a beefy cloud VPS with unlimited ports — a single-board computer sitting on a shelf, connected to my LAN, with a single IP and a single pair of ports (80/443) punched through my router.
 
 On that machine lives: a smart home dashboard, a family utilities app, a few API endpoints, and OpenClaw — my AI agent runtime. They all need HTTPS. They all share the same IP. They can't all claim port 443.
