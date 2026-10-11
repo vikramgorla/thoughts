@@ -34,7 +34,9 @@ Every push to `main` is built and published by Cloudflare Pages.
    | `section`     | yes      | `professional` or `personal`. Should match the folder.           |
    | `description` | no       | Short summary for lists and RSS.                                 |
    | `originalUrl` | no       | For an older article republished here: the address where it first appeared. A note with a link is shown above the post. |
-   | `draft`       | no       | `true` keeps the post out of the published site.                 |
+   | `originalAuthor` | no    | Name it was first published under, if different.                 |
+   | `source`      | no       | `linkedin`, `devto` or `blogger`.                                |
+   | `draft`       | no       | `true` keeps the post out of pages, lists, RSS and sitemap.         |
 
 3. Commit and push to `main`. The site updates after the Cloudflare build finishes, usually within a minute or two.
 

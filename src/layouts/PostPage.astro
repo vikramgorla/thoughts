@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, date, section, description, originalUrl } = post.data;
+const { title, date, section, description, originalUrl, originalAuthor } = post.data;
 ---
 
 <Base title={title} description={description}>
@@ -20,7 +20,7 @@ const { title, date, section, description, originalUrl } = post.data;
     </div>
     {originalUrl && (
       <p class="note">
-        First published at <a href={originalUrl} rel="noopener">{new URL(originalUrl).hostname}</a>.
+        First published at <a href={originalUrl} rel="noopener">{new URL(originalUrl).hostname}</a>{originalAuthor && <> under the name {originalAuthor}</>}.
       </p>
     )}
     <hr />

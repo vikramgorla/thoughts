@@ -17,7 +17,12 @@ const posts = defineCollection({
     description: z.string().optional(),
     // For older articles republished here: link to where it first appeared.
     originalUrl: z.url().optional(),
-    // Set `draft: true` to keep a post out of the built site.
+    // Name the article was first published under, e.g. on LinkedIn or dev.to.
+    originalAuthor: z.string().optional(),
+    // Where it was first published.
+    source: z.enum(['linkedin', 'devto', 'blogger']).optional(),
+    // Set `draft: true` to keep a post out of the built site
+    // (no page, not in lists, RSS or sitemap).
     draft: z.boolean().optional().default(false),
   }),
 });
