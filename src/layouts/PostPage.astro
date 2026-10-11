@@ -9,10 +9,10 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, date, section, description, originalUrl, originalAuthor } = post.data;
+const { title, date, section, description, originalUrl, originalAuthor, cover, coverAlt } = post.data;
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} image={cover}>
   <article>
     <header class="post">
     <h1>{title}</h1>
@@ -26,6 +26,11 @@ const { title, date, section, description, originalUrl, originalAuthor } = post.
       </p>
     )}
     </header>
+    {cover && (
+      <figure class="cover">
+        <img src={cover} alt={coverAlt ?? ''} decoding="async" fetchpriority="high" />
+      </figure>
+    )}
     <Ornament class="divider" />
     <slot />
   </article>

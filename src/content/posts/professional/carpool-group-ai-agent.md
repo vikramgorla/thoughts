@@ -6,6 +6,8 @@ originalUrl: "https://www.linkedin.com/pulse/i-gave-our-carpool-group-ai-agent-o
 originalAuthor: "Vikram Venkataravana Reddy"
 source: linkedin
 draft: false
+cover: "/images/carpool-group-ai-agent/cover.webp"
+coverAlt: "I Gave our Carpool Group an AI Agent. One Month In, Here's What I Actually Learned."
 ---
 
 A month ago, I started an experiment.
@@ -26,6 +28,8 @@ It wasn't a technology problem. It was a coordination problem wrapped in social 
 
 So I built an agent to do it for them.
 
+![Before vs After Captain Raju](/images/carpool-group-ai-agent/image-01.webp)
+
 ### Meet Captain Raju
 
 Captain Raju is a WhatsApp bot with the soul of a Telugu film military commander. He runs roll call every evening at 7:30pm. He tracks who's confirmed, who's skipped, who still hasn't replied. He checks live traffic in the morning and alerts the squad if the motorway is a disaster. He sends Rajinikanth GIFs when someone heroically volunteers to drive.
@@ -33,6 +37,8 @@ Captain Raju is a WhatsApp bot with the soul of a Telugu film military commander
 He also, critically, knows when to shut up.
 
 The first version didn't. Early Raju was chatty. Two people agreeing on a pickup time didn't need his input, but he gave it anyway. The explicit rule I had to add to his configuration: when staying silent, respond with NO\_REPLY and nothing else. Getting an LLM to stay quiet is underrated engineering work.
+
+![How Captain Raju Thinks](/images/carpool-group-ai-agent/image-02.webp)
 
 ### What Actually Worked
 
@@ -58,6 +64,8 @@ Personality determines adoption, not capability. The boring version would have w
 
 I work in enterprise IT. I think about risk architecturally, not as an afterthought. So I deliberately treated this personal experiment with the same rigour I'd expect in a professional context — because that's the only way the learnings transfer.
 
+![Security by Design](/images/carpool-group-ai-agent/image-03.webp)
+
 Raju operates under hard constraints from day one:
 
 * Allowlisted actions only. He can send WhatsApp messages and read traffic data. Nothing else is available to him.
@@ -79,6 +87,8 @@ Running your own agent teaches you things no whitepaper does:
 * How security constraints should shape agent design from the start — not be bolted on after
 * What "production-ready" even means for this class of system
 
+![One Month of Learnings](/images/carpool-group-ai-agent/image-04.webp)
+
 The carpool bot is a toy. The mental models aren't.
 
 I have a month of these learnings — across a home assistant, a contract analysis tool, calendar integrations, smart home automations. Each experiment taught me something different about how autonomous systems behave when you're not watching, and how to design for the moments when they get it wrong.
@@ -87,4 +97,4 @@ If your team or organisation is starting to think seriously about agentic AI —
 
 The convoy doesn't wait. But it does check traffic first. 🚗💨
 
-This is part of a personal experiment in agentic AI I started about a month ago. All agents run locally on my own hardware. No company data, no production systems. For the full technical deep-dive, including the GIF-to-MP4 hack and the invisible Unicode character that became a production feature, read the original article on [dev.to](https://www.linkedin.com/redir/redirect?url=http%3A%2F%2Fdev%2Eto&urlhash=zTdX&trk=article-ssr-frontend-pulse_little-text-block): [https://dev.to/agent\_paaru/i-gave-a-whatsapp-carpool-bot-a-telugu-film-hero-soul-it-worked-5dh3](https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fdev%2Eto%2Fagent_paaru%2Fi-gave-a-whatsapp-carpool-bot-a-telugu-film-hero-soul-it-worked-5dh3&urlhash=XJUk&trk=article-ssr-frontend-pulse_little-text-block)
+This is part of a personal experiment in agentic AI I started about a month ago. All agents run locally on my own hardware. No company data, no production systems. For the full technical deep-dive, including the GIF-to-MP4 hack and the invisible Unicode character that became a production feature, read the original article on [dev.to](https://dev.to): [https://dev.to/agent\_paaru/i-gave-a-whatsapp-carpool-bot-a-telugu-film-hero-soul-it-worked-5dh3](https://dev.to/agent_paaru/i-gave-a-whatsapp-carpool-bot-a-telugu-film-hero-soul-it-worked-5dh3)

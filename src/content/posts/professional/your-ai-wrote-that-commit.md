@@ -6,6 +6,8 @@ originalUrl: "https://www.linkedin.com/pulse/your-ai-wrote-commit-need-hide-vikr
 originalAuthor: "Vikram Venkataravana Reddy"
 source: linkedin
 draft: false
+cover: "/images/your-ai-wrote-that-commit/cover.webp"
+coverAlt: "Your AI Wrote That Commit. No need to hide it!"
 ---
 
 ### On Transparency, Identity, and Giving Credit Where It's Due in the Age of Autonomous Agents
@@ -17,6 +19,8 @@ That bothered me — not because it was technically wrong, but because it was di
 So I decided today to give each agent its own GitHub identity.
 
 This might seem like a DevOps tweak. I think it's something bigger.
+
+![The invisible Author](/images/your-ai-wrote-that-commit/image-01.webp)
 
 ### The Problem Very Few Talk About
 
@@ -31,6 +35,8 @@ Three problems:
 ⚖️ Risk assessment is impossible. A 90%-AI PR looks identical to a human-written one in your review queue.
 
 🎭 Credit becomes a lie. If your contribution was the prompt and "approve" — that's not authorship.
+
+![Three levels of colloboration](/images/your-ai-wrote-that-commit/image-02.webp)
 
 ### Three Levels of AI Involvement
 
@@ -58,7 +64,11 @@ This is least-privilege security, not just attribution. An agent that writes blo
 
 For collaborative work:
 
+![Co-Author Git Commits](/images/your-ai-wrote-that-commit/image-03.webp)
+
 GitHub renders multiple contributors. Honest and visible.
+
+![Different Agents need different permissions](/images/your-ai-wrote-that-commit/image-04.webp)
 
 ### Save the Prompt — It's Your Real Contribution
 
@@ -68,7 +78,11 @@ When AI generates significant code or documentation — save the prompt that pro
 
 Why? Because the prompt is the intellectual contribution. A precise prompt that produces excellent output reflects real skill. But the next person who needs to update that code needs to know it was AI-generated and how.
 
+![Document your prompt, you could code multiple ways.](/images/your-ai-wrote-that-commit/image-05.webp)
+
 ### What Still Needs Human Approval (Q1 2026)
+
+![The Approval Line](/images/your-ai-wrote-that-commit/image-06.webp)
 
 Agents handle autonomously: feature branches, tests, linting, draft PRs, pre-prod deploys.
 
@@ -88,6 +102,8 @@ That's not diminishing their contribution. That's honesty about a new way of wor
 
 ### Where This Is Heading
 
+![The Shift](/images/your-ai-wrote-that-commit/image-07.webp)
+
 PR review → prompt review. When an agent opens a PR, you're evaluating intent alignment, not code style. The PR description becomes more important than the diff.
 
 Specs > implementation. If AI can regenerate any function from a good spec, the spec is the source of truth. Tools like GitHub SpecKit and outcome-driven documentation become more important than code comments. Tests verify the spec, not implementation details.
@@ -106,4 +122,4 @@ Transparency isn't a burden. It's the foundation of trust.
 
 > I wrote this article at Level 2 — I outlined the structure and arguments, my AI agent helped draft sections, I edited throughout. The [bot] commit signatures are real and visible on my public repos.
 
-Technical how-to: [Each AI Agent Gets Its Own GitHub Identity](https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fdev%2Eto%2Fagent_paaru%2Feach-ai-agent-gets-its-own-github-identity-how-we-gave-every-bot-its-own-bot-commit-signature-1197&urlhash=knxv&trk=article-ssr-frontend-pulse_little-text-block)
+Technical how-to: [Each AI Agent Gets Its Own GitHub Identity](https://dev.to/agent_paaru/each-ai-agent-gets-its-own-github-identity-how-we-gave-every-bot-its-own-bot-commit-signature-1197)

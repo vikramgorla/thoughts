@@ -6,6 +6,8 @@ originalUrl: "https://www.linkedin.com/feed/update/urn:li:share:7514031467128070
 originalAuthor: "Vikram Venkataravana Reddy"
 source: linkedin
 draft: false
+cover: "/images/agents-or-skills-industry-is-evolving/cover.webp"
+coverAlt: "Diagram: an agent in the centre, defined by its goal, surrounded by skills, behaviours, key measures, stakeholders and responsibilities. Agents define the goal. Skills define how."
 ---
 
 I build fewer and fewer custom agents.

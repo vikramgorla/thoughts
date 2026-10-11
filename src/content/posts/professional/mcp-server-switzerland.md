@@ -6,6 +6,8 @@ originalUrl: "https://www.linkedin.com/pulse/i-built-mcp-server-switzerland-week
 originalAuthor: "Vikram Venkataravana Reddy"
 source: linkedin
 draft: false
+cover: "/images/mcp-server-switzerland/cover.webp"
+coverAlt: "I Built an MCP Server for Switzerland this Weekend. Here's What I Learned."
 ---
 
 I went down the MCP rabbit hole last weekend. What started as "let me understand this protocol" turned into an open-source project with 68 tools, 20 data sources, and 879 tests — shipped to npm, Docker Hub, and GitHub in under 48 hours.
@@ -13,6 +15,8 @@ I went down the MCP rabbit hole last weekend. What started as "let me understand
 Here's the short version.
 
 ### WTF is MCP?
+
+![MCP is the new API](/images/mcp-server-switzerland/image-01.webp)
 
 If you've worked with APIs, you already get it. Model Context Protocol is a standard that lets AI assistants call external tools directly — like REST APIs, but for AI.
 
@@ -32,6 +36,8 @@ I wanted to fix that.
 
 ### 22 → 68 Tools in 2 Days
 
+![Swiss knife is real](/images/mcp-server-switzerland/image-02.webp)
+
 Day 1: 4 modules, 22 tools — transport, weather, geodata, companies. Shipped v0.1.0 to npm by evening.
 
 Day 2: Got addicted. Added parliament, avalanche warnings, air quality, Swiss Post, energy tariffs, SNB exchange rates, news, voting, dams, hiking trails, real estate, traffic, earthquakes...
@@ -46,7 +52,11 @@ Every API is different. MeteoSwiss uses station codes. ZEFIX wraps results in .l
 
 Distribution is harder than building. There's no "app store" for MCP. Every AI client has a different config format, different file location. I had to write install guides for 7 different apps and build a one-click .mcpb bundle just to make it accessible.
 
+![](/images/mcp-server-switzerland/image-03.webp)
+
 ### The Pipeline
+
+![CD Pipeline](/images/mcp-server-switzerland/image-04.webp)
 
 One merge to main now triggers everything automatically:
 
@@ -55,6 +65,8 @@ One merge to main now triggers everything automatically:
 This took 5 iterations to get right. GitHub Actions bot tokens can't trigger downstream workflows — learned that the hard way.
 
 ### What's Next for MCP
+
+![Future of MCP](/images/mcp-server-switzerland/image-05.webp)
 
 MCP is becoming the standard. Anthropic, OpenAI, Google, Microsoft — all converging on it.
 
@@ -68,6 +80,8 @@ For anyone sitting on open data: you're one MCP wrapper away from being AI-acces
 
 ### The Numbers
 
+![Current State](/images/mcp-server-switzerland/image-06.webp)
+
 68 tools · 20 Swiss APIs · 879 tests · 0 API keys · 16 releases · ~30 Agent hours · 6,771 lines of TypeScript
 
 ### Try It
@@ -78,7 +92,7 @@ npx mcp-swiss
 
 No API keys. No registration. Works with Claude, Cursor, VS Code, Windsurf, and any MCP client.
 
-⭐ [github.com/vikramgorla/mcp-swiss](http://github.com/vikramgorla/mcp-swiss?trk=article-ssr-frontend-pulse_little-text-block)
+⭐ [github.com/vikramgorla/mcp-swiss](https://github.com/vikramgorla/mcp-swiss)
 
 What data would you want your AI to access? Curious what MCP servers people are building.
 

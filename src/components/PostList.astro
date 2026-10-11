@@ -16,7 +16,12 @@ const { posts, showSection = false, emptyText = 'No posts yet.' } = Astro.props;
 ) : (
   <ul class="posts">
     {posts.map((post) => (
-      <li>
+      <li class={post.data.cover ? 'has-thumb' : undefined}>
+        {post.data.cover && (
+          <a class="thumb" href={postUrl(post)} tabindex="-1" aria-hidden="true">
+            <img src={post.data.cover} alt="" loading="lazy" decoding="async" />
+          </a>
+        )}
         <a class="title" href={postUrl(post)}>{post.data.title}</a>
         <div class="meta">
           <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>

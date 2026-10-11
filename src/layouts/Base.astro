@@ -9,9 +9,10 @@ import { SITE_TITLE, SITE_AUTHOR, SITE_DESCRIPTION } from '../consts';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = SITE_DESCRIPTION } = Astro.props;
+const { title, description = SITE_DESCRIPTION, image } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE_TITLE}` : `${SITE_TITLE} · ${SITE_AUTHOR}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
@@ -42,6 +43,7 @@ const isCurrent = (href: string) =>
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
+    {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
   </head>
   <body>
     <div class="wrap">

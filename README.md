@@ -36,13 +36,15 @@ Every push to `main` is built and published by Cloudflare Pages.
    | `originalUrl` | no       | For an older article republished here: the address where it first appeared. A note with a link is shown above the post. |
    | `originalAuthor` | no    | Name it was first published under, if different.                 |
    | `source`      | no       | `linkedin`, `devto` or `blogger`.                                |
+   | `cover`       | no       | Cover image shown at the top of the post, e.g. `/images/my-post/cover.webp`. |
+   | `coverAlt`    | no       | Short description of the cover image.                            |
    | `draft`       | no       | `true` keeps the post out of pages, lists, RSS and sitemap.         |
 
 3. Commit and push to `main`. The site updates after the Cloudflare build finishes, usually within a minute or two.
 
 You can also add or edit a file directly on github.com ("Add file" → "Create new file") and commit to `main`.
 
-Images can go in `public/images/` and be referenced as `![Description](/images/file.jpg)`.
+Images go in `public/images/<post-file-name>/` and are referenced as `![Description](/images/<post-file-name>/file.webp)`. Please keep them local rather than linking to other sites.
 
 ## Editing other pages
 

@@ -17,6 +17,9 @@ const posts = defineCollection({
     description: z.string().optional(),
     // For older articles republished here: link to where it first appeared.
     originalUrl: z.url().optional(),
+    // Optional cover image shown at the top of the post, e.g. /images/<post>/cover.webp
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
     // Name the article was first published under, e.g. on LinkedIn or dev.to.
     originalAuthor: z.string().optional(),
     // Where it was first published.
