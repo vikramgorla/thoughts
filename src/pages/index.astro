@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { getPosts } from '../lib/posts';
+
+const posts = (await getPosts()).slice(0, 10);
+---
+
+<Base>
+  <h1>Recent posts</h1>
+  <PostList
+    posts={posts}
+    showSection
+    emptyText="Nothing here yet. New posts will appear on this page."
+  />
+  {posts.length > 0 && (
+    <p class="meta">
+      More in <a href="/professional/">Professional</a> and <a href="/personal/">Personal</a>.
+    </p>
+  )}
+</Base>

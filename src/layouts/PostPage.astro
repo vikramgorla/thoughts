@@ -1,0 +1,29 @@
+---
+import Base from './Base.astro';
+import { SECTIONS } from '../consts';
+import { formatDate, type Post } from '../lib/posts';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, date, section, description, originalUrl } = post.data;
+---
+
+<Base title={title} description={description}>
+  <article>
+    <h1>{title}</h1>
+    <div class="meta">
+      <time datetime={date.toISOString()}>{formatDate(date)}</time>
+      · <a href={`/${section}/`}>{SECTIONS[section].title}</a>
+    </div>
+    {originalUrl && (
+      <p class="note">
+        First published at <a href={originalUrl} rel="noopener">{new URL(originalUrl).hostname}</a>.
+      </p>
+    )}
+    <hr />
+    <slot />
+  </article>
+</Base>

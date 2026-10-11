@@ -1,0 +1,29 @@
+---
+import { SECTIONS } from '../consts';
+import { formatDate, postUrl, type Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  showSection?: boolean;
+  emptyText?: string;
+}
+
+const { posts, showSection = false, emptyText = 'No posts yet.' } = Astro.props;
+---
+
+{posts.length === 0 ? (
+  <p class="empty">{emptyText}</p>
+) : (
+  <ul class="posts">
+    {posts.map((post) => (
+      <li>
+        <a class="title" href={postUrl(post)}>{post.data.title}</a>
+        <div class="meta">
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          {showSection && <> · {SECTIONS[post.data.section].title}</>}
+        </div>
+        {post.data.description && <p>{post.data.description}</p>}
+      </li>
+    ))}
+  </ul>
+)}
